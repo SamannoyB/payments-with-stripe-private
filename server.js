@@ -36,8 +36,8 @@ app.post('/checkout', async (req, res) => {
                     }
               ],
               mode: 'payment',
-              success_url: 'http://localhost:8080/success',
-              cancel_url: 'http://localhost:8080/cancelled'
+              success_url: 'http://payment.cyclic.app/success',
+              cancel_url: 'http://payment.cyclic.app/cancelled'
           });
 
           res.redirect(303, session.url);
