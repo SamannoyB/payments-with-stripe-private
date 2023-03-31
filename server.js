@@ -22,13 +22,14 @@ app.get('/cancelled', (req, res) => {
 
 app.post('/checkout', async (req, res) => {
           const session = await stripe.checkout.sessions.create({
+                    payment_method_types: ['card', 'google_pay', 'apple_pay'],
               line_items: [
                     {
                               price_data: {
                                         currency: 'inr',
                                         product_data: {
                                                   name: 'Apple Watch',
-                                                  images: ['apple-watch.jpg']
+                                                  images: ['https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/watch-compare-se-202209_GEO_IN_FMT_WHH?wid=308&hei=364&fmt=jpeg&qlt=90&.v=1661557187191']
                                         },
                                         unit_amount: 2000000
                               },
