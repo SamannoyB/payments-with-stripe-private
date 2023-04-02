@@ -1,5 +1,5 @@
 require("dotenv").config();
-const stripe = require('stripe')(process.env.SECRET_KEY_STRIPE);
+const stripe = require('stripe')(process.env.SECRET_KEY_STRIPE); // enter your secret key here
 const express = require('express');
 var path = require('path');
 var app = express();
